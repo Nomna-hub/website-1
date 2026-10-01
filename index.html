@@ -1,167 +1,125 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title></title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#ii").click(function () {
+                $("#upp").animate({ left: "0px" });
+            });
+
+            $("#i").click(function () {
+                $("#upp").animate({ left: "-250px" });
+            });
+
+        });
+    </script>
 </head>
+
 <body>
 
-    <!-----top_bar-->
-
-    <div class="top_bar">
-
-        <div  class="logo">
-            <img src="image/nnll.png">
-        </div>
+    <!-- Small Sidebar -->
+    <div class="top-bar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Menu.html">Menu</Menu></a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
-            <li><a href="">Contant</a></li>
+            <li>
+                <i id="ii" class="bi bi-justify"></i>
+            </li>
+
+            <li>
+                <i class="bi bi-house"></i>
+                <span>Home</span>
+            </li>
+
+            <li>
+                <i class="bi bi-caret-right-square"></i>
+                <span>Shorts</span>
+            </li>
+
+            <li>
+                <i class="bi bi-collection-play"></i>
+                <span>Subscriptions</span>
+            </li>
+
+            <li>
+                <i class="bi bi-person-fill"></i>
+                <span>You</span>
+            </li>
         </ul>
-        
-        <div class="icons">
-             <i class="bi bi-search"></i>
-             <i class="bi bi-justify-right"></i></div>
-
-     </div>
-
-     <!----hero-section-->
-    
-<section class="hero-section">
-
-    <div class="hero-content">
-        <h3>FRESH & HEALTHY</h3>
-        <h1>Rice</h1>
-        <p>
-            Delicious food made with fresh ingredients,
-            for a healthier and happier you.
-        </p>
-
-        <button>View Menu →</button>
     </div>
 
-    <div class="hero-image">
-        <img src="image/hhoo.png" alt="Rice Bowl">
+    <!-- Expandable Sidebar -->
+    <div id="upp" class="upp">
+
+        <i id="i" class="bi bi-justify close-menu"></i>
+
+        <ul>
+            <li>
+                <i class="bi bi-house"></i>
+                <span>Home</span>
+            </li>
+
+            <li>
+                <i class="bi bi-caret-right-square"></i>
+                <span>Shorts</span>
+            </li>
+
+            <li>
+                <i class="bi bi-collection-play"></i>
+                <span>Subscriptions</span>
+            </li>
+
+            <li>
+                <i class="bi bi-person-fill"></i>
+                <span>You</span>
+            </li>
+        </ul>
     </div>
 
- </section>
-
- <!----walcome-section-->
-
- <div class="walcome-section">
-    
-    <img src="image/slade.png">
-    <h1>New Bowl</h1>
-    <p>
-        Our new blowe is packed width fresh vegetable<br>
-        lean portien and delicious flavors .Aperfest<br>
-        choice for a healthy likestyle<br>
-    </p>
-    
-    <button>View Menu →</button>
-    
-    </div>
-
-    <!-----menu-section---->
-<div class="menu-section">
-
-    <h1 class="one-section">OUR MENU</h1>
-
-    <div class="card-one">
-        <img src="image/eenn.png">
-        <h2>Chicken Rice</h2>
-        <h3>$4.99</h3>
-    </div>
-
-    <div class="card-two">
-        <img src="image/img 8.png">
-        <h2>Veg Bowl</h2>
-        <h3>$4.99</h3>
-    </div>
-
-    <div class="card-three">
-        <img src="image/img 7.png">
-        <h2>Grilled Chicken</h2>
-        <h3>$4.99</h3>
-    </div>
-
-    <div class="card-for">
-        <img src="image/slade.png">
-        <h2>Spiecal Blow</h2>
-        <h3>$4.99</h3>
-    </div>
-</div>
-
-<!----nav_bar--->
-
- <div class="nav_bar">
-
-    <div class="logo-two">
-        <img src="image/OLP.png">
+    <!-- Navigation Bar -->
+    <header class="nav-bar">
+        <div class="logo">
+            <i class="bi bi-youtube"></i>
+            <h2>YouTube</h2>
         </div>
-        <h2>Ready to get started ?</h2>
-        <p>
-            Book your table and enjoy the best food in town.
-        </p>
 
-        <input type ="Date" placeholder="select Date"></input>
+        <input type="search" placeholder="Search">
+        <button class="search-btn">
+            <i class="bi bi-search"></i>
+        </button>
+    </header>
 
-        <img src="image/slade.png">
+    <!-- Video Cards -->
+    <main class="video-container">
 
-
- </div> 
- <!----footer---->
- <footer class="footer">
-
-    <div class="footer-box">
-        <div class="logo-three">
-            <img src="image/nnll.png">
+        <div class="video-card">
+            <video controls>
+                <source src="vid1.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <h3>My First Video</h3>
         </div>
-        <p>Fresh & Healthy Rice for everyone.</p>
-    </div>
 
-    <div class="footer-box">
-        <h3>Quick Links</h3>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Menu</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
-    </div>
+        <div class="video-card">
+            <video controls>
+                <source src="vid1.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <h3>My Second Video</h3>
+        </div>
 
-    <div class="footer-box">
-        <h3>Contact Us</h3>
-        <p>Karachi, Pakistan</p>
-        <p> +92 300 1234567</p>
-        <p>info@rice.com</p>
-    </div>
-
-</footer>
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </main>
 
 </body>
 </html>
